@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <title>Add To Cart</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <form action="/" method="post">
+          <label>First Name</label><br />
+          <input type="text" name="firstName" id="firstName" /><br />
+          <label>Room ID</label><br />
+          <input type="number" name="user_room_id" id="user_room_id" /><br />
+          <button id="submitbtn" class="btn waves-effect red darkin-1 button">
+            Submit
+          </button>
+          <button id="next_game" class="btn waves-effect red darkin-1">
+            next
+          </button>
+        </form>
+      </section>
+
+      <!-- redirect_to_host  -->
+      <form action="/redirect_host" method="post">
+        <button type="submit" id="next" class="btn green">Crete a Room</button>
+      </form>
+    </main>
+
+    <script type="module" src="../js/index.js"></script>
+
+    <!-- <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-analytics.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAZQE1m-U0eLuUamdJLjllP6WdfdODNR14",
+        authDomain: "realtime-haggle.firebaseapp.com",
+        databaseURL: "https://realtime-haggle-default-rtdb.firebaseio.com",
+        projectId: "realtime-haggle",
+        storageBucket: "realtime-haggle.appspot.com",
+        messagingSenderId: "782897742587",
+        appId: "1:782897742587:web:33a4ac340c737bf483e65e",
+        measurementId: "G-QGDK7T8KC0",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+
+      import {
+        getDatabase,
+        ref,
+        set,
+        child,
+        update,
+        remove,
+      } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
+
+      const db = getDatabase();
+
+      // Reference
+      function InsertData(room_id) {
+        set(ref(db, "player"), {
+          name: "ayush",
+          score: 2,
+        })
+          .then(() => {
+            alert("data has stored");
+          })
+          .catch((error) => {
+            alert("unsuccessful " + error);
+          });
+      }
+      // addBtn.addEventListener("click", (e) => {
+      //   e.preventDefault();
+      //   axios({
+      //     method: "post",
+      //     url: "/",
+      //   });
+      // });
+      // assign button
+      let submitbtn = document.querySelector("#submitbtn");
+      submitbtn.addEventListener("click", () => {
+        InsertData();
+        axios({
+          method: "post",
+          url: "/save",
+        });
+      });
+    </script> -->
+  </body>
+</html>

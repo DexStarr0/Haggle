@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Haggle</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <main>
+      <form action="/game" method="post">
+        <div>
+          <h4>Score:<%= score %></h4>
+          <h4>Round:<%= round %></h4>
+        </div>
+        <label for="describe_word">Describe Word</label><br />
+        <input type="text" name="user_word" id="user_word" /><br />
+        <!-- <button id="submitWord" class="btn waves-effect red darkin-1 button">
+          Submit
+        </button> -->
+        <button id="submit" class="btn waves-effect red darkin-1 button">
+          next
+        </button>
+      </form>
+    </main>
+    <script type="module" src="../js/game.js"></script>
+
+    public\host
+  </body>
+</html>

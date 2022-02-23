@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Next Round</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      .add_msg {
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: fit-content;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+  display: none;
+}
+.add_msg h1 {
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+.add_msg h1 span {
+  color: #ffa500;
+  font-weight: 200;
+}
+#single_player{
+  display: flex;
+  justify-content: space-around;
+}
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <button onclick="open_pop_box()" id="LeaderBoard" type="submit" class="btn green">
+        LeaderBoard
+      </button>
+      
+      <section class="add_msg">
+       <ul id="player_div">
+        <% for(var i = 0; i<players_leaderboard.length;i++){ %>
+        <div id="single_player" >
+          <li> <%= players_leaderboard[i].Name %></li>
+          <p>-</p>
+          <li> <%= players_leaderboard[i].Score %></li>
+          </div>
+        <% } %>
+      </ul>
+       <button onclick="close_pop_box()">OK</button>
+     </section>
+    </main>
+    
+    <script  src="../js/nextround.js"></script>
+  </body>
+</html>
